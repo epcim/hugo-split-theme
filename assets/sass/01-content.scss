@@ -13,13 +13,14 @@
 $color-background : #061C30;
 $color-text       : #848d96;
 $color-link       : #848d96;
-$color-link-hover : #CA486d;
+$color-link       : #54ada6;
+$color-link-hover : #fA080d;
 $color-maverick   : #47bec7;
 $color-tagline    : #CCCCCC;
 
 // Breakpoints
 $bp-smallish      : 1200px;
-$bp-tablet        : 800px;
+$bp-tablet        : 1024px;
 $bp-mobile        : 500px;
 
 // Images
@@ -88,8 +89,10 @@ body.page-template-page-fullsingle-split {
     background-size:cover;
 
     @media (max-width: $bp-tablet ) {
-      height: 80vh;
+      /*height: 80vh;*/
       width: 100%;
+      display: none;
+      visibility: hidden;
     }
 
   }
@@ -161,6 +164,9 @@ body.page-template-page-fullsingle-split {
 
 }
 
+
+
+
 //-------------------------------------------------------------------------------
 // Biography
 //-------------------------------------------------------------------------------
@@ -186,7 +192,8 @@ body.page-template-page-fullsingle-split {
   a {
     color: $color-link;
     transition-duration: 0.5s;
-    border-bottom: 1px dotted $color-link;
+    /* border-bottom: 1px dotted $color-link; */
+    border-bottom: 1px $color-link;
 
     &:hover {
       color: $color-link-hover;

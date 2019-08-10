@@ -1,13 +1,13 @@
 /*
-Template Name: Split
-Author: One Page Love
-Author URI: https://onepagelove.com
-Template URI: https://onepagelove.com/split
-Description: Split is a centrally-divided layout for a professional online presence with a big image or video left with alongside content.
+template name: split
+author: one page love
+author uri: https://onepagelove.com
+template uri: https://onepagelove.com/split
+description: split is a centrally-divided layout for a professional online presence with a big image or video left with alongside content.
 */
-/* -- CSS Reset -- */
-@import url("https://fonts.googleapis.com/css?family=Montserrat:400,600");
-@import url("https://fonts.googleapis.com/css?family=Lora");
+/* -- css reset -- */
+@import url("https://fonts.googleapis.com/css?family=montserrat:400,600");
+@import url("https://fonts.googleapis.com/css?family=lora");
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -411,3 +411,4 @@ video.video {
   width: 100%;
   height: 100%;
 }
+

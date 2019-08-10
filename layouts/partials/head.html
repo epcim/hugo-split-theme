@@ -21,8 +21,12 @@
 <!-- Favicon -->
 {{ with .Site.Params.favicon }}<link rel="icon" href="{{ . | absURL }}" />{{ end }}
 
-<!-- Styles -->
+<!-- Styles 
 <link rel="stylesheet" href="{{ "assets/css/split.css" | absURL }}" type="text/css" media="screen" />
+-->
+{{ $options := (dict "targetPath" "css/split.css" "outputStyle" "compressed" "enableSourceMap" true ) }}
+{{ $styles := resources.Get "sass/split.scss" | resources.ToCSS $options }}
+<link rel="stylesheet" href="{{ $styles.Permalink }}" integrity="{{ $styles.Data.Integrity }}" type="text/css" media="screen">
 <meta name="viewport" content="width=device-width,initial-scale=1" />
 
 <!-- Image Styles -->
@@ -33,6 +37,17 @@
   {{ end }}
   </style>
 {{ end }}
+
+
+<!-- jquery
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script>
+      $('#split-content').click(function(){
+         $('#split-content').toggle(400);
+         $(body).addClass('hide');
+      });
+  </script>
+-->
 
 <!-- Google Analytics -->
 {{ if and (.Site.GoogleAnalytics) (not (in (printf "%#v" .Site.BaseURL) "localhost")) }}

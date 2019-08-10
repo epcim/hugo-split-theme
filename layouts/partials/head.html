@@ -5,8 +5,146 @@
 <title>{{ if .IsPage }}{{ .Title }} - {{ end }}{{ .Site.Title }}</title>
 {{ with .Site.Params.author }}<meta name="author" content="{{ . }}" />{{ end }}
 {{ with .Site.Params.description }}<meta name="description" content="{{ . }}" />{{ end }}
+
+<meta name="og:locality" content="Kysuce"/>
+<meta name="og:region" content="Kysuce"/>
+<meta property="og:locale" content="sk_SK" />
+<meta property="og:country-name" content="SK"/>
+<meta property="place:location:latitude" content="49.40046"/>
+<meta property="place:location:longitude" content="18.84069"/>
+<meta property="business:contact_data:street_address" content="Zákysučie 2192"/>
+<meta property="business:contact_data:locality" content="Krásno nad Kysucou"/>
+<meta property="business:contact_data:postal_code" content="02302"/>
+<meta property="business:contact_data:country_name" content="Slovakia"/>
+<meta property="business:contact_data:email" content="simurda@wckanal.sk"/>
+<meta property="business:contact_data:phone_number" content="+421904693711"/>
+<meta property="business:contact_data:website" content="http://wckanal.sk"/>
+<meta property="business:currencies_accepted" content="EUR"/>
+<meta property="business:price_range" content="$$"/>
+<meta property="business:alternate_name" content="krtkovanie"/>
+<meta property="business:opening_hours" content="Mo-Su"/>
+
 <meta name="robots" content="index, follow" />
 <meta name="referrer" content="always" />
+<script type="application/ld+json">
+{
+    "@context" : "http://schema.org",
+    "@type" : "LocalBusiness",
+    "mainEntityOfPage": {
+         "@type": "WebPage",
+         "@id": "{{ .Site.BaseURL }}"
+    },
+    "name" : "{{ .Title }}",
+    "alternateName" : "krtkovanie",
+    "description" : "{{ if .Description }}{{ .Description }}{{ else }}{{if .IsPage}}{{ .Summary }}{{ end }}{{ end }}, {{ if isset .Params "tags" }}{{ range .Params.tags }}{{ . }},{{ end }}{{ end }}",
+    "knowsLanguage" : "sk-SK,cz-CZ,de-AT,de-DE,pl-PL,en-US",
+    "currenciesAccepted": "EUR",
+    "openingHours": "Mo-Su",
+    "paymentAccepted	": "Cash, Local Exchange Tradings System",
+    "priceRange": "$$",
+    "address": "Krásno nad Kysucou, SK",
+    "areaServed": {
+      "@type": "GeoShape",
+      "addressCountry": "SK",
+      "polygon": "49.849680646501206,18.174068903515604 49.487048961778875,17.877438044140604 49.313672218251746,18.253719782421854 48.887483836617285,17.871944880078104 48.90915098596598,18.443233942578104 48.84050612336482,18.948605036328104 49.062357817440606,19.421017145703104 49.24737750293162,19.289181208203104 49.48883316364531,19.107906794140604 49.730879117622436,19.25759551484373 49.74507969565127,18.816769098828104 49.76992070813663,18.786556696484354",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Zákysučie 2192",
+        "addressLocality": "Krásno nad Kysucou",
+        "postalCode": "02302"
+      }
+    },
+    "email": "simurda@wckanal.sk",
+    "employee": "{{ range .Site.Author }}{{ . }}{{ end }}",
+    "founder": "{{ range .Site.Author }}{{ . }}{{ end }}",
+    "location": "Jaroslav Šimurda, Krásno nad Kysucou, SK",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Zákysučie 2192",
+      "addressLocality": "Krásno nad Kysucou",
+      "postalCode": "02302"},
+    "geo": "49.40046,18.84069",
+    "telephone": "+421904693711",
+}
+</script>
+<script type='application/ld+json'>{
+  "@context": "http://www.schema.org",
+  "@type": "person",
+  "name": "Jaroslav Šimurda",
+  "email": "simurda@wckanal.sk",
+  "telephone": "+421 904 693 i711",
+  "url": "http://wckanal.sk",
+    "sameAs" : [
+      "https://www.facebook.com/jaroslav.simurda",
+      "https://www.instagram.com/wckanal_simurda"],
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Zákysučie 2192",
+    "addressLocality": "Krásno nad Kysucou",
+    "postalCode": "02302"}
+}</script>
+<script type="application/ld+json">
+{
+    "@context" : "http://schema.org",
+    "@type" : "Organization",
+    "mainEntityOfPage": {
+         "@type": "WebPage",
+         "@id": "{{ .Site.BaseURL }}"
+    },
+    "name" : "{{ .Title }}",
+    "description" : "{{ if .Description }}{{ .Description }}{{ else }}{{if .IsPage}}{{ .Summary }}{{ end }}{{ end }}",
+    "knowsLanguage" : "sk-SK,cz-CZ,de-AT,de-DE,pl-PL,en-US",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Zákysučie 2192",
+      "addressLocality": "Krásno nad Kysucou",
+      "postalCode": "02302"},
+    "areaServed": "49.849680646501206,18.174068903515604 49.487048961778875,17.877438044140604 49.313672218251746,18.253719782421854 48.887483836617285,17.871944880078104 48.90915098596598,18.443233942578104 48.84050612336482,18.948605036328104 49.062357817440606,19.421017145703104 49.24737750293162,19.289181208203104 49.48883316364531,19.107906794140604 49.730879117622436,19.25759551484373 49.74507969565127,18.816769098828104 49.76992070813663,18.786556696484354",
+    "email": "simurda@wckanal.sk",
+    "location": "Jaroslav Šimurda, Krásno nad Kysucou, SK",
+    "address": "Jaroslav Šimurda, Krásno nad Kysucou, SK",
+    "telephone": "+421904693711",
+}
+</script>
+<script type="application/ld+json">
+{
+    "@context" : "http://schema.org",
+    "@type" : "Service",
+    "mainEntityOfPage": {
+         "@type": "WebPage",
+         "@id": "{{ .Site.BaseURL }}"
+    },
+    "name" : "{{ .Title }}",
+    "alternateName" : "krtkovanie",
+    "description" : "{{ if .Description }}{{ .Description }}{{ else }}{{if .IsPage}}{{ .Summary }}{{ end }}{{ end }}",
+    "areaServed": "49.849680646501206,18.174068903515604 49.487048961778875,17.877438044140604 49.313672218251746,18.253719782421854 48.887483836617285,17.871944880078104 48.90915098596598,18.443233942578104 48.84050612336482,18.948605036328104 49.062357817440606,19.421017145703104 49.24737750293162,19.289181208203104 49.48883316364531,19.107906794140604 49.730879117622436,19.25759551484373 49.74507969565127,18.816769098828104 49.76992070813663,18.786556696484354",
+}
+</script>
+<script type="application/ld+json">
+{
+    "@context" : "http://schema.org",
+    "@type" : "BlogPosting",
+    "mainEntityOfPage": {
+         "@type": "WebPage",
+         "@id": "{{ .Site.BaseURL }}"
+    },
+    "name" : "{{ .Title }}",
+    "description" : "{{ if .Description }}{{ .Description }}{{ else }}{{if .IsPage}}{{ .Summary }}{{ end }}{{ end }}",
+    "keywords" : [ {{ if isset .Params "tags" }}{{ range .Params.tags }}"{{ . }}",{{ end }}{{ end }}"krtkovanie kanalizace wc cistenie potrubi" ]
+    "inLanguage" : "sk-SK",
+    "url" : "{{ .Permalink }}",
+    "author" : "{{ range .Site.Author }}{{ . }}{{ end }}",
+    "creator" : "{{ range .Site.Author }}{{ . }}{{ end }}",
+    "accountablePerson" : "{{ range .Site.Author }}{{ . }}{{ end }}",
+    "inLanguage" : "sk-SK,cz-CZ,de-AT,de-DE,pl-PL,en-US",
+    "publisher": "{{ range .Site.Author }}{{ . }}{{ end }}",
+    "copyrightHolder" : "{{ range .Site.Author }}{{ . }}{{ end }}",
+    "copyrightYear" : "{{ .Date.Format "2019" }}",
+    "datePublished": "{{ .Date }}",
+    "dateModified" : "{{ .Date }}",
+    "wordCount" : "{{ .WordCount }}",
+}
+</script>
 
 <!-- Social & Open Graph -->
 <meta property="og:title" content="{{ if .IsPage }}{{ .Title }} - {{ end }}{{ .Site.Title }}" />
